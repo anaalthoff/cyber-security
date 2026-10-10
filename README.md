@@ -1,4 +1,4 @@
-# Firewall Humano — Campanha de Segurança da Informação
+# Firewall Humano - Campanha de Segurança da Informação
 
 > "Nenhuma tecnologia bloqueia o que você deixa passar."
 
