@@ -30,6 +30,7 @@
       <nav aria-label="Seções da campanha">
         <ul class="main-nav">
           <li><a href="#inicio">Início</a></li>
+          <li><a href="#ativos">Ativos</a></li>
         </ul>
       </nav>
     </div>
@@ -57,6 +58,123 @@
         <figure class="hero__figure framed-image">
           <img src="assets/images/hero-cadeado.webp" alt="Mão aberta segurando um cadeado digital luminoso">
         </figure>
+      </div>
+    </section>
+
+    <!-- ===================== 2. ATIVOS ===================== -->
+    <section id="ativos" class="section">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__kicker">[01] O que estamos protegendo</p>
+          <h2>Ativo de informação é tudo o que tem valor para a SisFEAP</h2>
+          <p>Se for perdido, alterado ou exposto, causa prejuízo para a empresa, para os clientes e para você.</p>
+        </header>
+
+        <ul class="card-grid card-grid--3">
+          <li class="card">
+            <span class="card__icon" aria-hidden="true">👤</span>
+            <h3>Dados pessoais</h3>
+            <p>Nome, CPF, dados bancários e currículo de bolsistas e pesquisadores. Protegidos pela LGPD.</p>
+          </li>
+          <li class="card">
+            <span class="card__icon" aria-hidden="true">📁</span>
+            <h3>Projetos e prestações de contas</h3>
+            <p>Editais, pareceres, orçamentos, contratos e relatórios financeiros das fundações clientes.</p>
+          </li>
+          <li class="card">
+            <span class="card__icon" aria-hidden="true">🔑</span>
+            <h3>Credenciais</h3>
+            <p>Login, senha, código de verificação (MFA), crachá e chaves de acesso a servidores.</p>
+          </li>
+          <li class="card">
+            <span class="card__icon" aria-hidden="true">🖥️</span>
+            <h3>Sistemas</h3>
+            <p>O ERP SisFEAP, bancos de dados, código-fonte, e-mail e ferramentas internas.</p>
+          </li>
+          <li class="card">
+            <span class="card__icon" aria-hidden="true">💻</span>
+            <h3>Equipamentos</h3>
+            <p>Notebooks, celulares corporativos, servidores, impressoras e mídias removíveis.</p>
+          </li>
+          <li class="card">
+            <span class="card__icon" aria-hidden="true">🧠</span>
+            <h3>Pessoas e conhecimento</h3>
+            <p>A experiência da equipe, processos internos e decisões estratégicas que não estão em nenhum arquivo.</p>
+          </li>
+        </ul>
+
+        <div class="split">
+          <div>
+            <h3 class="subheading">Dado → informação → conhecimento</h3>
+            <ol class="dik">
+              <li class="dik__step">
+                <span class="dik__label">Dado</span>
+                <code>4100</code>
+                <p>Um número solto. Sozinho, não diz nada.</p>
+              </li>
+              <li class="dik__step">
+                <span class="dik__label">Informação</span>
+                <code>Bolsa de doutorado de outubro: R$ 4.100</code>
+                <p>O dado ganhou contexto e passou a ter valor (e risco).</p>
+              </li>
+              <li class="dik__step">
+                <span class="dik__label">Conhecimento</span>
+                <code>As bolsas deste edital estão acima do orçamento: revisar repasses.</code>
+                <p>A informação analisada vira decisão. É o ativo mais valioso.</p>
+              </li>
+            </ol>
+          </div>
+          <figure class="framed-image framed-image--small">
+            <img src="assets/images/ativos-dados.png"
+              alt="Profissional interagindo com painéis digitais de dados ao redor de um globo">
+          </figure>
+        </div>
+
+        <h3 class="subheading">Classificação: cada informação tem um nível de cuidado</h3>
+        <div class="table-wrapper">
+          <table class="classification-table">
+            <caption class="visually-hidden">Níveis de classificação da informação na SisFEAP</caption>
+            <thead>
+              <tr>
+                <th scope="col">Nível</th>
+                <th scope="col">Exemplos</th>
+                <th scope="col">Quem pode acessar</th>
+                <th scope="col">Como tratar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><span class="label label--public">Pública</span></th>
+                <td>Editais publicados, site institucional</td>
+                <td>Qualquer pessoa</td>
+                <td>Pode divulgar, mas só a versão oficial</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="label label--internal">Interna</span></th>
+                <td>Manuais de processo, ramais, comunicados</td>
+                <td>Colaboradores da SisFEAP</td>
+                <td>Não compartilhar fora da empresa</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="label label--confidential">Confidencial</span></th>
+                <td>Dados de bolsistas, contratos, prestações de contas</td>
+                <td>Somente quem precisa para trabalhar</td>
+                <td>Enviar só por canais oficiais e conferir o destinatário</td>
+              </tr>
+              <tr>
+                <th scope="row"><span class="label label--restricted">Restrita</span></th>
+                <td>Senhas de produção, chaves de criptografia, auditorias em andamento</td>
+                <td>Pessoas nominalmente autorizadas</td>
+                <td>Acesso registrado e revisado; nunca em e-mail ou chat</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="callout">
+          <strong>Controle dos ativos:</strong> todo ativo tem um <em>responsável</em>, está no <em>inventário</em>
+          e tem regras de acesso. Não sabe a classificação de um arquivo? Trate como <strong>confidencial</strong> e
+          pergunte ao responsável.
+        </p>
       </div>
     </section>
   </main>

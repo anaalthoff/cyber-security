@@ -226,6 +226,24 @@ kbd {
   box-shadow: 6px 6px 0 var(--color-black);
 }
 
+/* Cartões */
+.card {
+  padding: var(--space-md);
+  background: var(--color-white);
+  border: var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-offset);
+}
+
+.card h3 { font-size: 1.6rem; }
+.card p:last-child { margin-bottom: 0; }
+
+.card__icon {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-size: 2rem;
+}
+
 /* Imagens com moldura deslocada */
 .framed-image {
   margin: 0;
@@ -240,6 +258,61 @@ kbd {
 }
 
 .framed-image--small { box-shadow: var(--shadow-offset); }
+
+.label {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border: var(--border);
+  border-radius: var(--radius);
+  font-size: var(--text-sm);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.label--public { background: var(--color-white); }
+.label--internal { background: var(--color-sky); }
+.label--confidential { background: var(--color-navy); color: var(--color-white); }
+.label--restricted { background: var(--color-black); border-color: var(--color-black); color: var(--color-white); }
+
+/* Destaques e notas */
+.callout {
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  background: var(--color-sky);
+  border-left: 6px solid var(--color-navy);
+}
+
+.subheading {
+  margin-top: var(--space-lg);
+  font-size: 2rem;
+}
+
+/* Tabelas */
+.table-wrapper { margin-bottom: var(--space-lg); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+  background: var(--color-white);
+  border: var(--border);
+}
+
+th, td {
+  padding: 0.85rem var(--space-sm);
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-sky);
+}
+
+thead th {
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
 
 /* ---------- 5. Seções ---------- */
 
@@ -325,6 +398,47 @@ kbd {
 }
 
 .hero__figure { aspect-ratio: 3 / 2; }
+
+/* Dado, informação, conhecimento */
+.dik {
+  list-style: none;
+}
+
+.dik__step {
+  position: relative;
+  margin-bottom: var(--space-sm);
+  padding: var(--space-sm) var(--space-md);
+  background: var(--color-white);
+  border: var(--border);
+}
+
+.dik__step + .dik__step::before {
+  content: "↓";
+  position: absolute;
+  top: -1.45rem;
+  left: var(--space-md);
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.dik__label {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 1.35rem;
+  color: var(--color-navy);
+}
+
+.dik__step code {
+  display: inline-block;
+  margin: 0.2rem 0 0.4rem;
+  padding: 0.1rem 0.5rem;
+  background: var(--color-sky);
+}
+
+.dik__step p {
+  margin: 0;
+  font-size: var(--text-sm);
+}
 
 /* Rodapé */
 .site-footer {

@@ -1,4 +1,4 @@
-# Firewall Humano - Campanha de Segurança da Informação
+# Firewall Humano — Campanha de Segurança da Informação
 
 > "Nenhuma tecnologia bloqueia o que você deixa passar."
 
@@ -17,9 +17,18 @@ Não é preciso servidor, instalação nem build. Com internet, a página usa as
 campanha-seguranca-informacao/
 ├── index.html          estrutura e conteúdo da campanha (HTML semântico)
 ├── css/style.css       apresentação: variáveis, layout, componentes
+├── js/main.js          comportamento: exibe o nome em texto se o logo faltar
 ├── assets/images/      imagens da campanha e logo da SisFEAP
+├── extras/simulador/   simulador e checklist guardados para uso futuro (fora da página)
 └── README.md
 ```
+
+O script é clássico (`defer`), e não ES module, porque módulos são bloqueados pelo navegador quando a página é aberta direto do disco (`file://`).
+
+### Reativar o simulador e o checklist
+
+Os arquivos em `extras/simulador/` não são carregados pela página. Cada um traz no topo as instruções para voltar a usá-lo: o HTML das seções, o CSS, as funções JavaScript e os dados das 10 situações.
+
 ## Seções e conteúdos da disciplina
 
 | Seção | Conteúdos |
