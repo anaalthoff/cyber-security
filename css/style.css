@@ -282,6 +282,11 @@ kbd {
   border-left: 6px solid var(--color-navy);
 }
 
+.note {
+  font-size: var(--text-sm);
+  font-style: italic;
+}
+
 .subheading {
   margin-top: var(--space-lg);
   font-size: 2rem;
@@ -439,6 +444,36 @@ thead th {
   margin: 0;
   font-size: var(--text-sm);
 }
+
+/* Pilares */
+.pillar {
+  padding: var(--space-md);
+  border: var(--border);
+  box-shadow: var(--shadow-offset);
+  background: var(--color-white);
+}
+
+.pillar__letter {
+  margin: 0;
+  font-family: var(--font-title);
+  font-size: 5rem;
+  line-height: 1;
+  color: var(--color-navy);
+}
+
+.pillar__definition {
+  font-weight: 700;
+}
+
+.pillar__ok,
+.pillar__fail {
+  padding: var(--space-xs) var(--space-sm);
+  font-size: var(--text-sm);
+  border-left: 4px solid;
+}
+
+.pillar__ok { border-color: var(--color-success); }
+.pillar__fail { border-color: var(--color-danger); margin-bottom: 0; }
 
 /* Rodapé */
 .site-footer {
