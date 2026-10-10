@@ -339,6 +339,8 @@ kbd {
   font-style: italic;
 }
 
+.note--light { color: var(--color-sky); }
+
 .subheading {
   margin-top: var(--space-lg);
   font-size: 2rem;
@@ -659,6 +661,49 @@ pre {
 
 .audit-flow strong::before {
   content: counter(audit) ". ";
+}
+
+/* Incidente */
+.incident-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+  list-style: none;
+}
+
+.incident-step {
+  padding: var(--space-md);
+  background: var(--color-white);
+  color: var(--color-black);
+  border: 2px solid var(--color-white);
+  box-shadow: 6px 6px 0 var(--color-black);
+  font-size: var(--text-sm);
+}
+
+.incident-step h3 {
+  color: var(--color-navy) !important;
+  font-size: 2.25rem;
+}
+
+.incident-step__number {
+  display: inline-grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-bottom: var(--space-xs);
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-family: var(--font-title);
+  font-size: 1.6rem;
+}
+
+.incident-step__contact span {
+  display: block;
+  padding: 0.2rem 0.5rem;
+  margin-bottom: 0.25rem;
+  background: var(--color-sky);
+  font-weight: 700;
 }
 
 /* Rodapé */
