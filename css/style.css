@@ -244,6 +244,12 @@ kbd {
   font-size: 2rem;
 }
 
+.card--dark {
+  background: var(--color-navy-soft);
+  border-color: var(--color-sky);
+  box-shadow: 6px 6px 0 var(--color-black);
+}
+
 /* Imagens com moldura deslocada */
 .framed-image {
   margin: 0;
@@ -258,6 +264,39 @@ kbd {
 }
 
 .framed-image--small { box-shadow: var(--shadow-offset); }
+
+/* Listas com marcador de verificação */
+.check-list {
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+  margin-bottom: var(--space-xs);
+  padding-left: 1.6rem;
+}
+
+.check-list li::before {
+  content: "›";
+  position: absolute;
+  left: 0.3rem;
+  font-weight: 700;
+}
+
+/* Etiquetas */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 0.15rem 0.6rem;
+  border: 1px solid var(--color-sky);
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
 
 .label {
   display: inline-block;
@@ -282,6 +321,11 @@ kbd {
   border-left: 6px solid var(--color-navy);
 }
 
+.callout--dark {
+  background: var(--color-navy-soft);
+  border-left-color: var(--color-sky);
+}
+
 .note {
   font-size: var(--text-sm);
   font-style: italic;
@@ -291,6 +335,8 @@ kbd {
   margin-top: var(--space-lg);
   font-size: 2rem;
 }
+
+.subheading--light { color: var(--color-white); }
 
 /* Tabelas */
 .table-wrapper { margin-bottom: var(--space-lg); }
@@ -318,6 +364,14 @@ thead th {
   font-weight: 400;
   letter-spacing: 0.04em;
 }
+
+.misuse-table {
+  color: var(--color-black);
+  border-color: var(--color-sky);
+}
+
+.misuse-table thead th { background: var(--color-black); }
+.misuse-table tbody th { color: var(--color-navy); }
 
 /* ---------- 5. Seções ---------- */
 
@@ -474,6 +528,47 @@ thead th {
 
 .pillar__ok { border-color: var(--color-success); }
 .pillar__fail { border-color: var(--color-danger); margin-bottom: 0; }
+
+/* Fórmula de risco */
+.risk-formula {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+
+.risk-formula__term {
+  flex: 1;
+  padding: var(--space-md);
+  text-align: center;
+  border: 2px solid var(--color-sky);
+}
+
+.risk-formula__term span {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 2.25rem;
+}
+
+.risk-formula__term small { font-size: var(--text-sm); }
+
+.risk-formula__term--result {
+  background: var(--color-white);
+  color: var(--color-navy);
+  border-color: var(--color-white);
+}
+
+.risk-formula__operator {
+  font-family: var(--font-title);
+  font-size: 3rem;
+}
+
+.threat-origin {
+  margin-bottom: var(--space-lg);
+  padding: var(--space-md);
+  border: 2px solid var(--color-sky);
+}
 
 /* Rodapé */
 .site-footer {

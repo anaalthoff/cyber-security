@@ -32,6 +32,7 @@
           <li><a href="#inicio">Início</a></li>
           <li><a href="#ativos">Ativos</a></li>
           <li><a href="#pilares">Pilares</a></li>
+          <li><a href="#ameacas">Ameaças</a></li>
         </ul>
       </nav>
     </div>
@@ -219,6 +220,144 @@
         </div>
         <p class="note">Também buscamos <strong>autenticidade</strong> (saber quem fez) e <strong>não repúdio</strong>
           (quem fez não pode negar), por isso cada pessoa tem o seu próprio login.</p>
+      </div>
+    </section>
+
+    <!-- ===================== 4. AMEAÇAS ===================== -->
+    <section id="ameacas" class="section section--dark">
+      <div class="container">
+        <header class="section-header">
+          <p class="section-header__kicker">[03] Ameaças mais perto do que parece</p>
+          <h2>O ataque raramente arromba a porta. Ele pede para entrar.</h2>
+        </header>
+
+        <div class="risk-formula" role="group" aria-label="Como surge um risco">
+          <div class="risk-formula__term">
+            <span>Ameaça</span>
+            <small>o que pode causar dano<br>(golpista, malware, erro)</small>
+          </div>
+          <span class="risk-formula__operator" aria-hidden="true">+</span>
+          <div class="risk-formula__term">
+            <span>Vulnerabilidade</span>
+            <small>a brecha<br>(senha fraca, sistema desatualizado)</small>
+          </div>
+          <span class="risk-formula__operator" aria-hidden="true">=</span>
+          <div class="risk-formula__term risk-formula__term--result">
+            <span>Risco</span>
+            <small>probabilidade × impacto</small>
+          </div>
+        </div>
+
+        <div class="split split--even">
+          <article class="threat-origin">
+            <h3>Ameaças internas</h3>
+            <ul class="check-list">
+              <li>Colaborador desatento que erra o destinatário</li>
+              <li>Pessoa que acessa dados sem necessidade, por curiosidade</li>
+              <li>Ex-colaborador com acesso ainda ativo</li>
+              <li>Terceirizado com mais permissões do que precisa</li>
+            </ul>
+          </article>
+          <article class="threat-origin">
+            <h3>Ameaças externas</h3>
+            <ul class="check-list">
+              <li>Golpistas que se passam por suporte, banco ou fundação</li>
+              <li>Malware espalhado por anexos, links e pendrives</li>
+              <li>Robôs que testam senhas vazadas em massa</li>
+              <li>Criminosos interessados em dados pessoais e financeiros</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="callout callout--dark">
+          <strong>Domínio do usuário:</strong> uma infraestrutura de TI tem vários domínios: estação de trabalho, rede
+          local,
+          internet, acesso remoto, sistemas. O primeiro deles é o <strong>usuário</strong>, é onde a maioria dos ataques
+          começa,
+          e é onde você está. Por isso você é o firewall humano.
+        </p>
+
+        <div class="card-grid card-grid--3">
+          <article class="card card--dark">
+            <h3>Engenharia social</h3>
+            <p>Manipular pessoas em vez de sistemas, explorando urgência, medo, autoridade ou vontade de ajudar.</p>
+            <ul class="tag-list">
+              <li>Phishing (e-mail)</li>
+              <li>Smishing (SMS/WhatsApp)</li>
+              <li>Vishing (telefone)</li>
+              <li>Pretexting (história falsa)</li>
+              <li>Tailgating (entrar “de carona”)</li>
+              <li>Shoulder surfing (olhar por cima do ombro)</li>
+            </ul>
+          </article>
+          <article class="card card--dark">
+            <h3>Malware</h3>
+            <p>Software malicioso que entra por anexos, downloads, programas piratas e mídias removíveis.</p>
+            <ul class="tag-list">
+              <li>Vírus e worms</li>
+              <li>Trojan (parece útil)</li>
+              <li>Ransomware (sequestra dados)</li>
+              <li>Spyware e keylogger (espiona)</li>
+            </ul>
+          </article>
+          <article class="card card--dark">
+            <h3>Técnicas de ataque</h3>
+            <p>Formas comuns de explorar vulnerabilidades técnicas e humanas.</p>
+            <ul class="tag-list">
+              <li>Força bruta (tentar senhas)</li>
+              <li>Credential stuffing (senha vazada reutilizada)</li>
+              <li>Interceptação em Wi-Fi público</li>
+              <li>Redes Wi-Fi falsas</li>
+              <li>Exploração de sistemas sem atualização</li>
+            </ul>
+          </article>
+        </div>
+
+        <h3 class="subheading subheading--light">Uso indevido dos recursos: o risco que nasce dentro de casa</h3>
+        <div class="table-wrapper">
+          <table class="misuse-table">
+            <caption class="visually-hidden">Recursos da empresa, exemplos de uso indevido e riscos associados</caption>
+            <thead>
+              <tr>
+                <th scope="col">Recurso</th>
+                <th scope="col">Uso indevido</th>
+                <th scope="col">Risco</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">E-mail corporativo</th>
+                <td>Cadastrar em sites pessoais, promoções e redes sociais</td>
+                <td>Mais spam e phishing direcionado; endereço exposto em vazamentos</td>
+              </tr>
+              <tr>
+                <th scope="row">Computador</th>
+                <td>Instalar programas sem autorização ou piratas</td>
+                <td>Malware, violação de licença (Lei 9.609/1998), perda de dados</td>
+              </tr>
+              <tr>
+                <th scope="row">Credenciais</th>
+                <td>Emprestar login e senha a um colega</td>
+                <td>Ações em seu nome; impossível saber quem fez o quê</td>
+              </tr>
+              <tr>
+                <th scope="row">Armazenamento</th>
+                <td>Copiar arquivos da empresa para nuvem pessoal ou pendrive</td>
+                <td>Vazamento, perda do controle sobre os dados e infração à LGPD</td>
+              </tr>
+              <tr>
+                <th scope="row">Rede e internet</th>
+                <td>Downloads e acessos não relacionados ao trabalho</td>
+                <td>Infecção, lentidão e indisponibilidade para todos</td>
+              </tr>
+              <tr>
+                <th scope="row">Impressora</th>
+                <td>Deixar documentos confidenciais na bandeja</td>
+                <td>Exposição de dados pessoais a qualquer pessoa que passe</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
   </main>
