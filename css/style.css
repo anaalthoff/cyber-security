@@ -410,12 +410,6 @@ thead th {
 
 .brand__logo { height: 51px; width: auto; }
 
-.brand__fallback {
-  font-family: var(--font-title);
-  font-size: 2rem;
-  color: var(--color-navy);
-}
-
 .main-nav {
   display: flex;
   gap: var(--space-md);

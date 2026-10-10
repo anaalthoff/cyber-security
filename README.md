@@ -6,7 +6,7 @@ Campanha educativa para os colaboradores da **SisFEAP** (ERP para universidades 
 
 ## Como executar
 
-1. Abra a pasta `campanha-seguranca-informacao`.
+1. Abra a pasta `cyber-security`.
 2. Dê dois cliques em `index.html` (Chrome, Edge ou Firefox).
 
 Não é preciso servidor, instalação nem build. Com internet, a página usa as fontes Bebas Neue e Fira Code do Google Fonts; sem internet, ela usa fontes equivalentes do sistema.
@@ -14,33 +14,28 @@ Não é preciso servidor, instalação nem build. Com internet, a página usa as
 ## Estrutura
 
 ```
-campanha-seguranca-informacao/
+cyber-security/
 ├── index.html          estrutura e conteúdo da campanha (HTML semântico)
 ├── css/style.css       apresentação: variáveis, layout, componentes
-├── js/main.js          comportamento: exibe o nome em texto se o logo faltar
-├── assets/images/      imagens da campanha e logo da SisFEAP
-├── extras/simulador/   simulador e checklist guardados para uso futuro (fora da página)
+├── assets/images/      imagens da campanha, logo e ícone da SisFEAP
 └── README.md
 ```
 
-O script é clássico (`defer`), e não ES module, porque módulos são bloqueados pelo navegador quando a página é aberta direto do disco (`file://`).
-
-### Reativar o simulador e o checklist
-
-Os arquivos em `extras/simulador/` não são carregados pela página. Cada um traz no topo as instruções para voltar a usá-lo: o HTML das seções, o CSS, as funções JavaScript e os dados das 10 situações.
+A página é feita só com HTML e CSS: não depende de JavaScript, frameworks ou bibliotecas.
 
 ## Seções e conteúdos da disciplina
 
 | Seção | Conteúdos |
 |---|---|
-| Abertura | Conceito da campanha, domínio do usuário |
+| Abertura | Conceito da campanha, responsabilidade compartilhada |
 | Ativos | Ativos de informação, dado/informação/conhecimento, classificação, controle |
 | Pilares | Confidencialidade, integridade, disponibilidade |
-| Ameaças | Ameaça × vulnerabilidade × risco, ameaças internas/externas, engenharia social, malware, técnicas de ataque, uso indevido de recursos |
+| Ameaças | Ameaça × vulnerabilidade × risco, ameaças internas/externas, domínio do usuário, engenharia social, malware, técnicas de ataque, uso indevido de recursos |
 | Hábitos | Segurança física e lógica, controle de acesso |
 | Dev | SQL Injection, NoSQL Injection, XSS, CSRF, testes de segurança |
 | Política | Normas e leis, monitoramento, testes, auditoria, planos de segurança |
 | Incidente | Protocolo: Pare → Preserve → Reporte → Não resolva sozinho |
+| Compromisso | Reforço da mensagem e compromissos do colaborador |
 
 ## Limitações
 
