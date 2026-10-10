@@ -244,6 +244,14 @@ kbd {
   font-size: 2rem;
 }
 
+.card__meta {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.card--compact { font-size: var(--text-sm); }
+
 .card--dark {
   background: var(--color-navy-soft);
   border-color: var(--color-sky);
@@ -623,6 +631,35 @@ pre {
 
 .dev-aside .subheading { margin-top: var(--space-lg); font-size: 1.75rem; }
 .dev-aside .check-list { font-size: var(--text-sm); }
+
+/* Auditoria */
+.audit-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+  list-style: none;
+  counter-reset: audit;
+}
+
+.audit-flow li {
+  counter-increment: audit;
+  padding: var(--space-sm);
+  background: var(--color-navy);
+  color: var(--color-white);
+  font-size: var(--text-sm);
+}
+
+.audit-flow strong {
+  display: block;
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+.audit-flow strong::before {
+  content: counter(audit) ". ";
+}
 
 /* Rodapé */
 .site-footer {
