@@ -706,6 +706,31 @@ pre {
   font-weight: 700;
 }
 
+/* Compromisso */
+.closing {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.closing__header { margin-bottom: 0; }
+
+.pledge-card {
+  padding: var(--space-lg);
+  background: var(--color-navy);
+  color: var(--color-white);
+  box-shadow: 6px 6px 0 var(--color-black);
+}
+
+.pledge-card .console-line { color: var(--color-sky); }
+
+.pledge-card__name {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
 /* Rodapé */
 .site-footer {
   padding: var(--space-sm) 0;
